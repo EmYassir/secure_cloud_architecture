@@ -1,0 +1,49 @@
+#
+# Configuration file for the Xen instance template, created
+# by xen-tools 4.3.1 on Thu Jan 10 09:19:51 2013.
+#
+
+#
+#  Kernel + memory size
+#
+kernel      = '/boot/vmlinuz-3.5.0-17-generic'
+ramdisk     = '/boot/initrd.img-3.5.0-17-generic'
+
+vcpus       = '1'
+memory      = '128'
+
+#
+#  Disk device(s).
+#
+root        = '/dev/xvda2 ro'
+disk        = [
+                  'file:/home/xen/domains/template/disk.img,xvda2,w',
+                  'file:/home/xen/domains/template/swap.img,xvda1,w',
+              ]
+
+
+#
+#  Physical volumes
+#
+
+
+#
+#  Hostname
+#
+name        = 'template'
+
+#
+#  Networking
+#
+dhcp        = 'dhcp'
+vif         = [ 'mac=00:16:3E:A3:4A:D0' ]
+
+#
+#  Behaviour
+#
+on_poweroff = 'destroy'
+on_reboot   = 'restart'
+on_crash    = 'restart'
+
+
+

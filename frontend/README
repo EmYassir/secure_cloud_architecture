@@ -1,0 +1,7 @@
+Scripts exécutés sur le serveur d'entrée (frontend):
+
+demon.sh : daemon qui tourne en cron sur le serveur principal et qui controle l'intégrité de l'archive reçu l'envoie au scheduler.
+
+take_results.sh : script qui tourne en cron sur le serveur principal et recupère sur les "workers" le resultat des jobs puis place l'archive dans le répertoire du bon utilisateur.
+
+

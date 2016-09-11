@@ -1,0 +1,5 @@
+Programme exécuté sur le serveur d'entrée (frontend):
+
+scheduler: Programme en cpp du scheduler éxécuté sur le serveur principal (frontend). Le programme envoi tous les jobs sur différents serveurs (workers).
+
+

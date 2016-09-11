@@ -1,0 +1,15 @@
+Scripts éxécutés sur chaque worker.
+
+demarre.sh: le scripts est lancé en ssh par le serveur d'entrée quand le job à été transféré sur la machine worker. Il appelle à son tour les autres scripts pour demmarer une Machine virtuelle avec Xen et y éxécuter le Job.
+
+disk.img : l'image du disque de la machine virtuelle (disque dur) contenant une distribution Debian squeeze. ( non inclu pour cause d'espace)
+
+swap.img: image du swap de la VM. ( non inclu pour cause d'espace)
+
+template.cfg: fichier de configuration de la machine virtuelle pour Xen.
+
+mac_generation.sh : genere une adresse mac aléatoirement pour la machine virtuelle.
+
+getip.sh: récupère depuis le serveur dhcp l'adresse ip de la machine virtuelle qui a une adresse mac spécifiée en paramètre.
+
+modify_script.sh: duplique le fichier de configuration template.sh pour crée une nouvelle machine virtuelle.
